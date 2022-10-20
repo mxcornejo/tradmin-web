@@ -84,7 +84,7 @@ export const CalculadoraboletahonorariosPage = () => {
                         </div>
                     </div>
                     <div className="col-md-4">
-                        <h4>Retención</h4>
+                        <h4>{`Retención: ${retencion}%`}</h4>
 
                         <select className="form-select" value={retencion} onChange={e => setRetencion(e.target.value)}>
                             {Object.entries(retenciones).map(c => (
@@ -99,14 +99,14 @@ export const CalculadoraboletahonorariosPage = () => {
                 <div className="row">
                     <div className="col-md-6">
                         <h4>Líquido</h4>
-                        <p>Si lo pactado fue en valores líquidos, deberás hacer la boleta por ${liquido} y recibirás:</p>
-                        <h2>${montonameliquido}</h2>
+                        <p>Si lo pactado fue en valores líquidos, deberás hacer la boleta por {'$ ' + new Intl.NumberFormat('de-DE').format(liquido)} y recibirás:</p>
+                        <h2>{'$ ' + new Intl.NumberFormat('de-DE').format(montonameliquido)}</h2>
                         <p>en efectivo.</p>
                     </div>
                     <div className="col-md-6">
                         <h4>Bruto</h4>
-                        <p>Si lo pactado fue en valores brutos, deberás hacer la boleta por ${montonamebruto} y recibirás:</p>
-                        <h2>${bruto}</h2>
+                        <p>Si lo pactado fue en valores brutos, deberás hacer la boleta por {'$ ' + new Intl.NumberFormat('de-DE').format(montonamebruto)} y recibirás:</p>
+                        <h2>{'$ ' + new Intl.NumberFormat('de-DE').format(bruto)}</h2>
                         <p>en efectivo.</p>
                     </div>
                 </div>
