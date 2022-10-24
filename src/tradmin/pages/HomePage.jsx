@@ -1,4 +1,4 @@
-import { BotoneraList } from "../components"
+import { BotoneraList, IndicadoresGrid } from "../components"
 
 export const HomePage = () => {
   return (
@@ -11,6 +11,7 @@ export const HomePage = () => {
                 </div>
 
                 <BotoneraList/>
+                <IndicadoresGrid/>
 
                 <div className="col-md-12">
                     <h6>Pronto contaremos con más funciones y sorpresas</h6>
